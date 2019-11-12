@@ -18,25 +18,25 @@
   <body>
   <form action="calculate" method="post">
     <fieldset style="width: fit-content; height: fit-content">
-      <legend>Calculator</legend>
+      <legend style="color:red">Calculator</legend>
       <table>
         <tr>
           <td>
-            <input type="number" name="operand1" placeholder="First operand..." value="${operand1}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;<input type="number" name="operand1" placeholder="First operand..." value="${operand1}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <input type="number" name="operand2" placeholder="Second operand..." value="${operand2}">
           </td>
         </tr>
         <tr>
           <td>
-            <button type="submit" name="operator" value="+">Addition(+)</button>
-            <button type="submit" name="operator" value="-">Addition(-)</button>
-            <button type="submit" name="operator" value="X">Multiplication(X)</button>
-            <button type="submit" name="operator" value="/">Division(/)</button>
+            <button type="submit" name="operator" value="Addition">Addition(+)</button>
+            <button type="submit" name="operator" value="Subtraction">Subtraction(-)</button>
+            <button type="submit" name="operator" value="Multiplication">Multiplication(X)</button>
+            <button type="submit" name="operator" value="Division">Division(/)</button>
           </td>
         </tr>
       </table>
     </fieldset>
   </form>
-  <p><h2 style="color: sandybrown">Result: ${result}</h2></p>
+  <p><h2 style="color: sandybrown">${result}</h2></p>
   </body>
 </html>

@@ -18,23 +18,23 @@ public class CalculatorController {
     public ModelAndView Calculate(@RequestParam("operand1") double operand1, @RequestParam("operand2") double operand2, @RequestParam("operator") String operator) {
         String result = "";
         switch (operator) {
-            case "+":
+            case "Addition":
                 result = operand1 + operand2 + "";
                 break;
-            case "-":
+            case "Subtraction":
                 result = operand1 - operand2 + "";
                 break;
-            case "X":
+            case "Multiplication":
                 result = operand1 * operand2 + "";
                 break;
-            case "/":
+            case "Division":
                 if (operand2 == 0) {
                     result = "Can't divide by 0";
                 } else {
                     result = operand1 / operand2 + "";
                 }
         }
-        ModelAndView modelAndView = new ModelAndView("index", "result", result);
+        ModelAndView modelAndView = new ModelAndView("index", "result", "Result of " + operator + ": " + result);
         modelAndView.addObject("operand1", operand1);
         modelAndView.addObject("operand2", operand2);
         return modelAndView;
